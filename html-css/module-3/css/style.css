@@ -1,0 +1,117 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+box-sizing: inherit;
+}
+
+body {
+    font-family: "Plaifair Display", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: normal;
+    color: #626262;
+    background: #fff;
+    min-width: 100vw;
+}
+
+/* Header styles */
+
+nav ul.wrapper li {
+    font-size: 14px;
+    line-height: 24px;
+    display: inline-block;
+    text-transform: uppercase; 
+    
+}
+nav ul.wrapper li:hover,
+nav ul.wrapper li:focus {
+    color: #03a9f4;
+    cursor: pointer;
+}
+nav ul.wrapper li:first-child {
+    margin-right: 120px;
+}
+nav ul.wrapper li:nth-of-type(2) {
+    margin-right: 105px;
+}
+nav ul.wrapper li:nth-of-type(3) {
+    margin-right: 95px;
+}
+nav {
+    padding: 72px 165px 83px 72px;
+    text-align: center;
+}
+
+/* Main content styles */
+
+
+
+.wrapper {
+    width: 900px;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 0;
+}
+
+.wrapper.main li {
+    display: inline-block;
+    width: 420px;  
+    font-size: 0; 
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+main p {
+    font-size: 14px;
+    
+} 
+p:nth-child(2n) {
+    margin-bottom: 132px;
+}
+
+article p.uppercase {
+    text-transform: uppercase;
+    margin-bottom: 35px;
+}
+
+h2 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: normal;
+    margin-top: 25px;
+}
+
+.wrapper.main li:nth-child(2n+1) {
+    margin-right: 60px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 27px;
+}
+
+.load_button {
+    width: 165px;
+    height: 55px;
+    background: #fff;
+    border: 1px solid #626262;
+    cursor: pointer; 
+    display: inline-block;
+    margin: 0 auto;
+}
+
+p .load_button {
+    font-size: 20px;
+    line-height: 24px;
+    color: #626262;
+}
