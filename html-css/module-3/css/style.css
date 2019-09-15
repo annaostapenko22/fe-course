@@ -104,8 +104,8 @@ h2 {
     font-weight: normal;
     margin-bottom: 40px;
 }
-.main.wrapper {
-    margin-bottom: 180px;
+main {
+    padding-bottom: 180px;
 }
 .wrapper.main li:nth-child(2n+1) {
     margin-right: 60px;
