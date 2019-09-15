@@ -104,8 +104,11 @@ h2 {
     font-weight: normal;
     margin-bottom: 40px;
 }
-main {
-    padding-bottom: 180px;
+section {
+    padding-bottom: 90px;
+}
+.wrapper.main {
+    margin-bottom: 90px;
 }
 .wrapper.main li:nth-child(2n+1) {
     margin-right: 60px;
@@ -117,13 +120,6 @@ img {
     height: auto;
     margin-bottom: 27px;
 }
-
-/* .button_wrapper {
-    height: 185px;
-    width: 900px;
-    margin: 0 auto;
-    position: relative;
-} */
 
 .load_button {
     width: 165px;
@@ -137,8 +133,4 @@ img {
     color: #626262;
     display: block;
     margin: 0 auto;
-    /* position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
 }
