@@ -59,11 +59,12 @@ input[type="radio"].visually-hidden {
 /* Header style */
 
 nav {
-    margin-bottom: 100px;
-    margin-top: 40px;
+    padding-bottom: 100px;
+    padding-top: 40px;
 }
 
 .site_logo {
+    display: block;
     float: left;
     font-size: 30px;
     letter-spacing: -1px;
@@ -100,6 +101,7 @@ nav {
 }
 
 .main_navigation a {
+    display: inline-block;
     font-size: 14px;
     letter-spacing: 0px;
     line-height: 11px;
@@ -108,6 +110,7 @@ nav {
     font-weight: 700;
     text-align: right;
     text-transform: uppercase;
+    vertical-align: middle;
 
 }
 
@@ -141,17 +144,22 @@ h2::after {
     background-color: #1abc9c;
     margin: 0 auto;
     margin-top: 31px;
+}
+
+.features_title,
+.blog_title {
     margin-bottom: 90px;
+}
+
+.products_list {
+    padding-bottom: 95px;
 }
 
 .products_list li {
     float: left;
     width: 255px;
     cursor: pointer;
-}
-
-.products_list li:nth-child(n+4) {
-    margin-bottom: 95px;
+    position: relative;
 }
 
 .products_list li:not(:nth-child(n+5)) {
@@ -170,35 +178,27 @@ h2::after {
     background: #323232;
     line-height: 40px;
     padding-left: 14px;
+    position: absolute;
+    bottom: 0px;
+    float: left;
 }
 
-.products_list h3::after {
-    content: " ";
+.products_list p {
     width: 55px;
     height: 40px;
-    background: #8c8c8c;
-    text-align: center;
+    font-size: 18px;
+    letter-spacing: 0px;
     line-height: 40px;
-    float: right;
+    color: #ffffff;
+    font-weight: 900;
+    text-align: center;
+    background: #8c8c8c;
+    position: absolute;
+    right: 0px;
+    bottom: -18px;
 }
 
-.products_list li:nth-child(4n+1) h3::after {
-    content: "$26";
-}
-
-.products_list li:nth-child(4n+2) h3::after {
-    content: "$31";
-}
-
-.products_list li:nth-child(4n+3) h3::after {
-    content: "$21";
-}
-
-.products_list li:nth-child(4n+4) h3::after {
-    content: "$56";
-}
-
-.products_list li:hover h3::after {
+.products_list li:hover p {
     background: #7fd9c7;
 }
 
@@ -211,54 +211,6 @@ h2::after {
     background: #1abc9c;
 }
 
-.products_list_item::before {
-    content: '';
-    display: block;
-    background: #e8effc;
-    height: 285px;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.img_shoe::before {
-    background-image: url("../img/products/product1.png");
-    background-size: 210;
-}
-
-.img_belt::before {
-    background-image: url("../img/products/product2.png");
-    background-size: 160px;
-}
-
-.img_hat::before {
-    background-image: url("../img/products/product9.png");
-    background-size: 220px;
-}
-
-.img_purse::before {
-    background-image: url("../img/products/product4.png");
-    background-size: 210px;
-}
-
-.img_bag::before {
-    background-image: url("../img/products/product3.png");
-    background-size: 180px;
-}
-
-.img_leather_belt::before {
-    background-image: url("../img/products/product5.png");
-    background-size: 208px;
-}
-
-.img_shoes::before {
-    background-image: url("../img/products/product6.png");
-    background-size: 200px;
-}
-
-.img_glasses::before {
-    background-image: url("../img/products/product8.png");
-    background-size: 230px;
-}
 
 /* Blog section styles */
 
@@ -281,6 +233,7 @@ h2::after {
     color: #555252;
     font-family: "Open Sans";
     font-weight: 600;
+    margin-bottom: 30px;
 }
 
 .blog_list h3::after {
@@ -290,33 +243,35 @@ h2::after {
     height: 3px;
     background-color: #4ec6ab;
     margin-top: 10px;
-    margin-bottom: 30px;
 }
 
 .blog_list p {
     font-size: 14px;
+    margin: 0;
+    margin-bottom: 17px;
 }
 
 .blog_list img {
     margin-bottom: 11px;
 }
 
-button {
-    display: block;
-    margin: 0;
-    padding: 0;
-    border: none;
+.blog_list a {
+    display: inline-block;
     width: 159px;
     height: 51px;
     border-radius: 3px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.39);
     background-color: #4ec6ab;
-    font-size: 20px;
-    line-height: 26px;
     color: #ffffff;
-    font-family: "Open Sans";
-    font-weight: 300;
     text-align: center;
     margin-bottom: 45px;
     cursor: pointer;
+    line-height: 51px;
+}
+
+.blog_list a p {
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-size: 16px;
+
 }
