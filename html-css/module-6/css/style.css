@@ -1,0 +1,340 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Roboto", "Montserrat", "Kaushan Script", "Arial", sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+    color: #999999;
+    font-weight: 400;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.navigation_list,
+.services_list,
+.team_list,
+.social_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2,
+h3,
+p {
+    padding: 0;
+    margin: 0;
+}
+
+span {
+    display: block;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.section_title {
+    font-size: 30px;
+    color: #333333;
+    font-family: "Montserrat";
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.section_title span {
+    font-size: 24px;
+    color: #333333;
+    font-family: "Kaushan Script";
+    font-weight: 400;
+    text-align: center;
+    text-transform: none;
+    margin-bottom: 20px;
+}
+
+/* HEADER STYLES */
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.navigation_list {
+    display: flex;
+    width: 490px;
+    justify-content: space-between;
+    align-content: flex-end;
+}
+
+.navigation_list_link {
+    font-family: "Montserrat";
+    font-size: 14px;
+    color: #95e1d3;
+    font-weight: 400;
+    text-align: center;
+}
+
+.navigation_list_link:hover,
+.navigation_list_link:focus {
+    color: #f38181;
+    padding-bottom: 5px;
+    border-bottom: solid 3px #f38181;
+}
+
+/* SERVICES SECTION STYLES */
+
+.services {
+    padding-top: 85px;
+    padding-bottom: 85px;
+}
+
+.title_container {
+    display: flex;
+    justify-content: center;
+}
+
+.services_list {
+    display: flex;
+    width: 1200px;
+    height: 235px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    padding-left: 92px;
+    padding-right: 32px;
+}
+
+.services_list_item {
+    flex-basis: 280px;
+    position: relative;
+}
+
+.services_title {
+    font-size: 14px;
+    color: #333333;
+    font-family: "Montserrat";
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.section_title::after {
+    display: block;
+    content: '';
+    width: 60px;
+    height: 3px;
+    background-color: #f38181;
+
+    margin: 0 auto;
+    margin-top: 34px;
+    margin-bottom: 65px;
+}
+
+.services_list_item::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 30px;
+    background-image: url("../img/alarm.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    transform: translateX(-170%);
+    top: 10%;
+}
+
+.services_list_item:nth-of-type(2)::before {
+    background-image: url("../img/graph.png");
+}
+
+.services_list_item:nth-of-type(3)::before {
+    background-image: url("../img/computer.png");
+}
+
+.services_list_item:nth-of-type(4)::before {
+    background-image: url("../img/book.png");
+}
+
+.services_list_item:nth-of-type(5)::before {
+    background-image: url("../img/home.png");
+}
+
+.services_list_item:nth-of-type(6)::before {
+    background-image: url("../img/digital.png");
+}
+
+/* TEAM SECTION STYLES */
+
+.team_list {
+    display: flex;
+    width: 1200px;
+    justify-content: space-between;
+    padding-bottom: 82px;
+}
+
+.team_description {
+    width: 980px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 95px;
+}
+
+.team_list_item h3 {
+    font-size: 14px;
+    color: #333333;
+    font-family: "Montserrat";
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.team_list_item p {
+    line-height: 24px;
+    font-size: 15px;
+    color: #999999;
+    font-family: "Roboto";
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+}
+
+.team_list_item:hover .overlay {
+    opacity: 1;
+    visibility: visible;
+    transition: 200ms linear;
+    cursor: pointer;
+}
+
+.overlay_container {
+    width: 380px;
+    height: 470px;
+    margin-bottom: 30px;
+    position: relative;
+
+}
+
+.overlay {
+    width: 380px;
+    height: 470px;
+    border: solid 1px rgb(0, 0, 0);
+    background-image: linear-gradient(0deg, rgba(240, 226, 144, .9) 0%, rgba(233, 138, 137, .9) 100%);
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    box-shadow: 10px 11px 0px 1px #95e1d3;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.social_list {
+    height: 470px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social_list_item {
+    width: 55px;
+    height: 55px;
+    background-color: #fce38a;
+    position: relative;
+    cursor: pointer;
+    border-right: solid 1px #b9bcb4;
+}
+
+
+.social_list_item:hover {
+    background-color: #95e1d3;
+    transition: 200ms linear;
+}
+
+.social_list_item img {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* FOOTER STYLES */
+.footer {
+    border-top: solid 1px #e5e5e5;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.footer address {
+    font-style: normal;
+    font-size: 14px;
+    color: #333333;
+    font-family: "Montserrat";
+    font-weight: 400;
+    text-align: center;
+}
+
+.footer address a {
+    color: #f38181;
+    cursor: pointer;
+}
+
+.email_form {
+    display: flex;
+}
+
+input[type="text"] {
+    margin: 0;
+    padding: 0;
+    width: 230px;
+    height: 40px;
+    border: 1px solid #e7e7e7;
+}
+
+input[placeholder] {
+    font-size: 15px;
+    line-height: 24px;
+    color: #cccccc;
+    font-family: "Roboto";
+    font-weight: 300;
+    font-style: italic;
+    padding-left: 10px;
+}
+
+.subscribe_button {
+    display: block;
+    width: 150px;
+    height: 40px;
+    border: none;
+    background-color: #95e1d3;
+    font-size: 14px;
+    color: #ffffff;
+    font-family: "Montserrat";
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+}
