@@ -236,6 +236,10 @@ span {
     transform: translate(-10px, -10px);
 }
 
+.team_list_item:hover .overlay_container .social_list_item img {
+    transform: translate(-50%, -50%);
+}
+
 .overlay {
     width: 380px;
     height: 470px;
