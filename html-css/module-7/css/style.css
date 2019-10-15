@@ -202,6 +202,7 @@ textarea {
 
 textarea {
     resize: none;
+    height: 210px;
 }
 
 input {
@@ -268,7 +269,7 @@ input:focus {
 
 .form_container {
     width: 455px;
-    height: 270px;
+    height: 210px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
