@@ -207,6 +207,7 @@ input {
 }
 
 input[type="text"],
+input[type="email"],
 textarea {
     font-size: 14px;
     letter-spacing: 0px;
@@ -231,7 +232,7 @@ input:invalid {
 }
 
 input:focus {
-    outline: 1px solid blue;
+    outline: 1px solid rgb(0, 0, 255);
 }
 
 .container form {
