@@ -228,16 +228,12 @@ input::placeholder {
     color: #bbbbbb;
 }
 
-input:valid {
+input:required:focus:valid {
     outline: 1px solid rgb(41, 253, 41);
 }
 
-input:invalid {
+input:required:focus:invalid {
     outline: 1px solid rgb(255, 0, 0);
-}
-
-input:focus {
-    outline: 1px solid rgb(0, 0, 255);
 }
 
 .container form {
