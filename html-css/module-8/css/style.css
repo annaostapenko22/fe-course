@@ -108,13 +108,15 @@ a {
 
 /* HEADER STYLES */
 
-.header .container {
-    background: url("../img/background_mobile.png"),
+.header  {
+    margin: 0 auto;
+    background: url("../img/background_tablet.png"),
         linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
     background-repeat: no-repeat;
     background-position: center;
     min-height: 540px;
     background-size: cover;
+    max-width: 767px;
 }
 
 
@@ -307,13 +309,14 @@ a {
 
 
 @media (min-width: 768px) {
-    .header .container {
-        background: url("../img/background_tablet.png"),
+    .header {
+        background: url("../img/background_desktop.png"),
             linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
         background-repeat: no-repeat;
         background-position: center;
         min-height: 540px;
         background-size: cover;
+        max-width: 1439px;
     }
 
     .container {
