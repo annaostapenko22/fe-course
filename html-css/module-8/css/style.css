@@ -68,13 +68,7 @@ html {
     box-sizing: inherit;
 }
 
-/* body {
-    font-family: "Roboto", "Montserrat", "Arial", sans-serif;
-    font-size: 15px;
-    line-height: 24px;
-    color: #999999;
-    font-weight: 400;
-} */
+
 
 img {
     display: block;
@@ -108,15 +102,16 @@ a {
 
 /* HEADER STYLES */
 
-.header  {
+.header {
     margin: 0 auto;
-    background: url("../img/background_tablet.png"),
+    background: url("../img/background_mobile.png"),
         linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
     background-repeat: no-repeat;
     background-position: center;
-    min-height: 540px;
+    min-height: 33.75rem;
     background-size: cover;
-    max-width: 767px;
+    max-width: 47.9375rem;
+    min-width: 20rem;
 }
 
 
@@ -128,29 +123,29 @@ a {
 }
 
 .main_title {
-    font-size: 20px;
+    font-size: 1.25rem;
     letter-spacing: 1px;
-    margin-bottom: 26px;
+    margin-bottom: 1.625rem;
 }
 
 .header_title {
-    font-size: 30px;
+    font-size: 1.875rem;
     line-height: 1.2;
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
 }
 
 .header_title_description {
     margin: 0 auto;
     font-family: 'RobotoL';
-    font-size: 18px;
+    font-size: 1.125rem;
     color: rgb(255, 255, 255);
-    width: 220px;
-    margin-bottom: 18px;
+    width: 13.75rem;
+    margin-bottom: 1.125rem;
 }
 
 .navigation {
-    padding: 32px 0;
-    margin-bottom: 78px;
+    padding: 2rem 0;
+    margin-bottom: 4.875rem;
 }
 
 .main_title,
@@ -162,15 +157,15 @@ a {
 .header_button {
     display: block;
     margin: 0 auto;
-    width: 280px;
-    min-height: 40px;
+    width: 17.5rem;
+    min-height: 2.5rem;
     text-align: center;
     font-family: 'MontserratR';
-    font-size: 14px;
+    font-size: 0.875rem;
     color: rgb(255, 255, 255);
     background-color: rgb(255, 78, 80);
-    border-radius: 20px;
-    line-height: 40px;
+    border-radius: 1.25rem;
+    line-height: 2.5rem;
 }
 
 
@@ -178,7 +173,7 @@ a {
 .navigation_list {
     margin: 0 auto;
     display: flex;
-    width: 163px;
+    width: 10.1875rem;
     justify-content: space-between;
 }
 
@@ -186,14 +181,14 @@ a {
     display: block;
     font-family: 'MontserratB';
     text-align: center;
-    font-size: 14px;
+    font-size: 0.875rem;
     color: rgb(255, 255, 255);
-    line-height: 36px;
+    line-height: 2.25rem;
     text-align: center;
     border: solid 2px rgba(255, 255, 255, 0);
     background-color: rgba(26, 25, 21, 0);
-    width: 94px;
-    height: 40px;
+    width: 5.875rem;
+    height: 2.5rem;
     border-radius: 20px;
 }
 
@@ -214,30 +209,30 @@ a {
 
 .contact_title,
 .contact_section_description {
-    padding: 0 50px;
+    padding: 0 3.125rem;
 }
 
 .contact_section .container {
-    padding-top: 67px;
-    padding-bottom: 57px;
+    padding-top: 4.1875rem;
+    padding-bottom: 3.5625rem;
 }
 
 .contact_section_title {
     text-align: center;
     font-family: 'MontserratR';
-    font-size: 22px;
+    font-size: 1.375rem;
     color: rgb(51, 51, 51);
     line-height: 1.2;
-    margin-bottom: 15px;
-    padding: 0 30px;
+    margin-bottom: 0.9375rem;
+    padding: 0 1.875rem;
 }
 
 .contact_title {
-    font-size: 14px;
+    font-size: 0.875rem;
     color: rgb(51, 51, 51);
     font-family: "MontserratB";
     text-align: center;
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
 }
 
 
@@ -250,16 +245,16 @@ a {
 
 .img_container {
     margin: 0 auto;
-    width: 126px;
-    height: 126px;
+    width: 7.875rem;
+    height: 7.875rem;
     position: relative;
 }
 
 .img_container::before {
     content: '';
     display: block;
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
     background-image: url("../img/icontv.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -285,10 +280,10 @@ a {
 
 .contact_section_description {
     font-family: 'RobotoL';
-    font-size: 14px;
+    font-size: 0.875rem;
     color: #666666;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
 }
 
 .container .page_button {
@@ -298,11 +293,11 @@ a {
     border-radius: 20px;
     background-color: rgb(255, 255, 255);
     border: solid 2px rgb(255, 78, 80);
-    width: 284px;
-    height: 44px;
+    width: 17.75rem;
+    height: 2.75rem;
     color: rgb(255, 78, 80);
     font-family: 'MontserratR';
-    font-size: 14px;
+    font-size: 0.875rem;
     margin: 0 auto;
     cursor: pointer;
 }
@@ -310,17 +305,17 @@ a {
 
 @media (min-width: 768px) {
     .header {
-        background: url("../img/background_desktop.png"),
+        background: url("../img/background_tablet.png"),
             linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
         background-repeat: no-repeat;
         background-position: center;
-        min-height: 540px;
+        min-height: 33.75rem;
         background-size: cover;
-        max-width: 1439px;
+        max-width: 89.9375rem;
     }
 
     .container {
-        width: 768px;
+        width: 48rem;
     }
 
     .navigation_list {
@@ -339,8 +334,8 @@ a {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 32px 47px;
-        margin-bottom: 35px;
+        padding: 2rem 2.9375rem;
+        margin-bottom: 2.1875rem;
     }
 
     .main_title {
@@ -351,41 +346,41 @@ a {
     .header_title_description,
     .header_title {
         margin: 0 auto;
-        width: 530px;
+        width: 33.125rem;
     }
 
     .header_title {
-        font-size: 52px;
-        margin-bottom: 26px;
+        font-size: 3.25rem;
+        margin-bottom: 1.625rem;
     }
 
     .header_title_description {
-        margin-bottom: 30px;
-        font-size: 24px;
+        margin-bottom: 1.875rem;
+        font-size: 1.5rem;
     }
 
     .header_button {
-        width: 226px;
+        width: 14.125rem;
         font-family: 'MontserratB';
     }
 
     .contact_section_title {
-        font-size: 22px;
+        font-size: 1.375rem;
         font-family: 'MontserratB';
-        margin-bottom: 30px;
+        margin-bottom: 1.875rem;
     }
 
     .contact_section_list {
         margin: 0 auto;
         display: flex;
-        width: 520px;
+        width: 32.5rem;
         flex-wrap: wrap;
         justify-content: space-between;
-        margin-bottom: 10px;
+        margin-bottom: 0.625rem;
     }
 
     .contact_section_list_item {
-        width: 231px;
+        width: 14.4375rem;
     }
 
     .contact_section_list_item:first-child {
@@ -402,13 +397,13 @@ a {
 
     .contact_section_list_item:first-of-type .contact_section_description,
     .contact_section_list_item:nth-of-type(3) .contact_section_description {
-        margin-bottom: 58px;
+        margin-bottom: 3.625rem;
     }
 
 
     .container .page_button {
         font-family: 'MontserratB';
-        width: 197px;
+        width: 12.3125rem;
     }
 }
 
@@ -419,38 +414,38 @@ a {
             linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
         background-repeat: no-repeat;
         background-position: center;
-        min-height: 700px;
+        min-height: 43.75rem;
         background-size: cover;
     }
 
     .container {
-        width: 1440px;
+        width: 90rem;
     }
 
     .navigation_container {
-        width: 940px;
+        width: 58.75rem;
         margin: 0 auto;
-        margin-bottom: 106px;
+        margin-bottom: 6.625rem;
     }
 
     .main_title {
-        font-size: 20px;
+        font-size: 1.25rem;
     }
 
     .header_title_description {
-        margin-bottom: 36px;
+        margin-bottom: 2.25rem;
     }
 
     .contact_section .container {
-        padding-bottom: 70px;
+        padding-bottom: 4.375rem;
     }
 
     .contact_section_list {
-        width: 940px;
+        width: 58.75rem;
     }
 
     .contact_section_list_item {
-        width: 220px;
+        width: 13.75rem;
     }
 
     .contact_section_list_item:first-of-type .contact_section_description,
