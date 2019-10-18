@@ -298,6 +298,11 @@ a {
         max-width: 89.9375rem;
     }
 
+    .contact_title,
+.contact_section_description {
+    padding: 0;
+}
+
     .container .navigation_container {
         margin-bottom: 2.25rem;
     }
@@ -381,8 +386,13 @@ a {
     }
 
     .contact_section_description {
-        padding: 0 1.5625rem;
+        padding: 0 20px;
     }
+
+    .contact_title,
+.contact_section_description {
+    padding: 0;
+}
 
     .container .navigation_container {
         margin-bottom: 7.1875rem;
