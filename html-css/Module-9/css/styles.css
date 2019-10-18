@@ -114,7 +114,7 @@ a {
 }
 
 .title_container .row {
-    margin: 0 -15px;
+    margin: 0 -0.9375rem;
 }
 
 .main_title,
@@ -138,7 +138,7 @@ a {
 
 .header_title {
     letter-spacing: -1px;
-    font-size: 30px;
+    font-size: 1.875rem;
     line-height: 1.2;
     margin-bottom: 0.5rem;
 }
@@ -193,10 +193,6 @@ a {
     text-align: center;
 }
 
-/* .contact_section_list_item .col-12 {
-    padding-left: 0;
-    padding-right: 0;
-} */
 
 .contact_title,
 .contact_section_description {
@@ -303,7 +299,7 @@ a {
     }
 
     .container .navigation_container {
-        margin-bottom: 36px;
+        margin-bottom: 2.25rem;
     }
 
     .navigation,
@@ -365,11 +361,11 @@ a {
     }
 
     .contact_section_list .row {
-        margin-bottom: 40px;
+        margin-bottom: 2.5rem;
     }
 
     .contact_section_description {
-        padding: 0 20px;
+        padding: 0 1.25rem;
     }
 }
 
@@ -385,11 +381,11 @@ a {
     }
 
     .contact_section_description {
-        padding: 0;
+        padding: 0 1.5625rem;
     }
 
     .container .navigation_container {
-        margin-bottom: 115px;
+        margin-bottom: 7.1875rem;
     }
 
     .navigation_container {
