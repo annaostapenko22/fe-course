@@ -88,17 +88,6 @@ a {
     text-decoration: none;
 }
 
-.container {
-    width: 100%;
-    margin: 0 auto;
-}
-
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -15px;
-}
 
 .header {
     margin: 0 auto;
@@ -193,6 +182,7 @@ a {
     background-color: rgb(255, 78, 80);
     border-radius: 1.25rem;
     line-height: 2.5rem;
+    width: 17.5rem;
 }
 
 /* CONTACT SECTION */
@@ -202,6 +192,11 @@ a {
 .contact_section_list_item img {
     text-align: center;
 }
+
+/* .contact_section_list_item .col-12 {
+    padding-left: 0;
+    padding-right: 0;
+} */
 
 .contact_title,
 .contact_section_description {
@@ -387,6 +382,10 @@ a {
         min-height: 43.75rem;
         background-size: cover;
         max-width: 1440px;
+    }
+
+    .contact_section_description {
+        padding: 0;
     }
 
     .container .navigation_container {
