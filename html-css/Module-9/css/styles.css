@@ -58,17 +58,6 @@
     /* Legacy iOS */
 }
 
-html {
-    box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-}
-
-
 
 img {
     display: block;
@@ -76,13 +65,12 @@ img {
     height: auto;
 }
 
-.container {
+/* .container {
     width: 320px;
     margin: 0 auto;
-}
+} */
 
-.navigation_list,
-.contact_section_list {
+ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -100,7 +88,17 @@ a {
     text-decoration: none;
 }
 
-/* HEADER STYLES */
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
 
 .header {
     margin: 0 auto;
@@ -114,6 +112,27 @@ a {
     min-width: 20rem;
 }
 
+
+.container .navigation_container {
+    margin-bottom: 76px;
+    padding: 2rem 0;
+}
+
+/* HEADER STYLES */
+
+.navigation_list {
+    margin: 0 auto;
+}
+
+.title_container .row {
+    margin: 0 -15px;
+}
+
+.main_title,
+.header_title,
+.header_title_description {
+    text-align: center;
+}
 
 .main_title,
 .header_title {
@@ -129,52 +148,20 @@ a {
 }
 
 .header_title {
-    font-size: 1.875rem;
+    letter-spacing: -1px;
+    font-size: 30px;
     line-height: 1.2;
     margin-bottom: 0.5rem;
 }
+
 
 .header_title_description {
     margin: 0 auto;
     font-family: 'RobotoL';
     font-size: 1.125rem;
     color: rgb(255, 255, 255);
-    width: 13.75rem;
+    width: 220px;
     margin-bottom: 1.125rem;
-}
-
-.navigation {
-    padding: 2rem 0;
-    margin-bottom: 4.875rem;
-}
-
-.main_title,
-.header_title,
-.header_title_description {
-    text-align: center;
-}
-
-.header_button {
-    display: block;
-    margin: 0 auto;
-    width: 17.5rem;
-    min-height: 2.5rem;
-    text-align: center;
-    font-family: 'MontserratR';
-    font-size: 0.875rem;
-    color: rgb(255, 255, 255);
-    background-color: rgb(255, 78, 80);
-    border-radius: 1.25rem;
-    line-height: 2.5rem;
-}
-
-
-
-.navigation_list {
-    margin: 0 auto;
-    display: flex;
-    width: 10.1875rem;
-    justify-content: space-between;
 }
 
 .navigation_list_link {
@@ -188,7 +175,6 @@ a {
     border: solid 2px rgba(255, 255, 255, 0);
     background-color: rgba(26, 25, 21, 0);
     width: 5.875rem;
-    height: 2.5rem;
     border-radius: 20px;
 }
 
@@ -197,13 +183,23 @@ a {
     border-color: rgb(255, 255, 255);
 }
 
+.header_button {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'MontserratR';
+    font-size: 0.875rem;
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 78, 80);
+    border-radius: 1.25rem;
+    line-height: 2.5rem;
+}
 
-/* CONTACT SECTION STYLES */
+/* CONTACT SECTION */
 
 .contact_section_title,
 .contact_section_description,
 .contact_section_list_item img {
-    margin: 0 auto;
     text-align: center;
 }
 
@@ -277,7 +273,6 @@ a {
 }
 
 
-
 .contact_section_description {
     font-family: 'RobotoL';
     font-size: 0.875rem;
@@ -293,15 +288,13 @@ a {
     border-radius: 20px;
     background-color: rgb(255, 255, 255);
     border: solid 2px rgb(255, 78, 80);
-    width: 17.75rem;
     height: 2.75rem;
     color: rgb(255, 78, 80);
-    font-family: 'MontserratR';
+    font-family: 'MontserratB';
     font-size: 0.875rem;
     margin: 0 auto;
     cursor: pointer;
 }
-
 
 @media (min-width: 768px) {
     .header {
@@ -314,15 +307,9 @@ a {
         max-width: 89.9375rem;
     }
 
-    .container {
-        width: 48rem;
+    .container .navigation_container {
+        margin-bottom: 36px;
     }
-
-    .navigation_list {
-        width: 100%;
-        justify-content: flex-end;
-    }
-
 
     .navigation,
     .main_title {
@@ -331,22 +318,17 @@ a {
     }
 
     .navigation_container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         padding: 2rem 2.9375rem;
         margin-bottom: 2.1875rem;
     }
 
     .main_title {
-        order: -1;
         cursor: pointer;
     }
 
     .header_title_description,
     .header_title {
         margin: 0 auto;
-        width: 33.125rem;
     }
 
     .header_title {
@@ -357,6 +339,7 @@ a {
     .header_title_description {
         margin-bottom: 1.875rem;
         font-size: 1.5rem;
+        width: 100%;
     }
 
     .header_button {
@@ -372,27 +355,7 @@ a {
 
     .contact_section_list {
         margin: 0 auto;
-        display: flex;
-        width: 32.5rem;
-        flex-wrap: wrap;
-        justify-content: space-between;
         margin-bottom: 0.625rem;
-    }
-
-    .contact_section_list_item {
-        width: 14.4375rem;
-    }
-
-    .contact_section_list_item:first-child {
-        order: -2;
-    }
-
-    .contact_section_list_item:nth-child(3) {
-        order: -1;
-    }
-
-    .contact_section_description {
-        padding: 0;
     }
 
     .contact_section_list_item:first-of-type .contact_section_description,
@@ -403,12 +366,19 @@ a {
 
     .container .page_button {
         font-family: 'MontserratB';
-        width: 12.3125rem;
+        width: 197px;
+    }
+
+    .contact_section_list .row {
+        margin-bottom: 40px;
+    }
+
+    .contact_section_description {
+        padding: 0 20px;
     }
 }
 
-
-@media (min-width: 940px) {
+@media (min-width: 992px) {
     .header .container {
         background: url("../img/background_desktop.png"),
             linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
@@ -416,10 +386,11 @@ a {
         background-position: center;
         min-height: 43.75rem;
         background-size: cover;
+        max-width: 1440px;
     }
 
-    .container {
-        width: 90rem;
+    .container .navigation_container {
+        margin-bottom: 115px;
     }
 
     .navigation_container {
@@ -432,24 +403,4 @@ a {
         font-size: 1.25rem;
     }
 
-    .header_title_description {
-        margin-bottom: 2.25rem;
-    }
-
-    .contact_section .container {
-        padding-bottom: 4.375rem;
-    }
-
-    .contact_section_list {
-        width: 58.75rem;
-    }
-
-    .contact_section_list_item {
-        width: 13.75rem;
-    }
-
-    .contact_section_list_item:first-of-type .contact_section_description,
-    .contact_section_list_item:nth-of-type(3) .contact_section_description {
-        margin-bottom: 0;
-    }
 }
