@@ -1,0 +1,15 @@
+%flex-align-set {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%background-img-set {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+%main-transition-set {
+    transition: all .2s linear;
+}

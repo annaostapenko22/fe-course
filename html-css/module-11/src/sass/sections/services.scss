@@ -1,0 +1,102 @@
+/* SERVICES SECTION STYLES */
+
+.services {
+  @include main-padding(85px, 85px);
+
+  
+  .services-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-line-pack: justify;
+    align-content: space-between;
+
+    &__item {
+      -ms-flex-preferred-size: 355px;
+      flex-basis: 355px;
+      position: relative;
+      margin-right: 50px;
+      padding-left: 80px;
+      margin-bottom: 100px;
+
+      &:nth-of-type(3n) {
+        margin-right: 0;
+      }
+
+      &:nth-of-type(n+4) {
+        margin-bottom: 0;
+      }
+
+      &:nth-of-type(2)::before {
+        background-image: url("../images/graph.svg");
+      }
+
+      &:nth-of-type(3)::before {
+        background-image: url("../images/computer.svg");
+      }
+
+      &:nth-of-type(4)::before {
+        background-image: url("../images/book.svg");
+      }
+
+      &:nth-of-type(5)::before {
+        background-image: url("../images/home.svg");
+      }
+
+      &:nth-of-type(6)::before {
+        background-image: url("../images/digital.svg");
+      }
+
+      &::before {
+        content: '';
+        display: block;
+        width: 40px;
+        height: 30px;
+        background-image: url("../images/alarm.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        -webkit-transform: translateX(-170%);
+        -ms-transform: translateX(-170%);
+        transform: translateX(-170%);
+        top: 10%;
+      }
+
+      .services-title {
+        font-size: 14px;
+        color: #333333;
+        font-family: "Montserrat";
+        font-weight: $normal-weight;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+
+.title-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    .section-title {
+      &::after {
+        display: block;
+        content: '';
+        width: 60px;
+        height: 3px;
+        background-color: $pink;
+        margin: 0 auto;
+        margin-top: 34px;
+        margin-bottom: 65px;
+      }
+    }
+  }

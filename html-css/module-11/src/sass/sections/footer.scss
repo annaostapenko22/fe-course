@@ -1,0 +1,68 @@
+/* FOOTER STYLES */
+
+.footer {
+  border-top: solid 1px #e5e5e5;
+
+  .container {
+    @extend %flex-align-set;
+    justify-content: space-between;
+    @include main-padding(10px, 10px);
+  }
+
+  address {
+    font-style: normal;
+    font-size: 14px;
+    color: $title-color;
+    font-family: $primary-font-family;
+    font-weight: $normal-weight;
+    text-align: center;
+
+    a {
+      color: $pink;
+      cursor: pointer;
+    }
+  }
+}
+
+.email-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  input[type="text"] {
+    margin: 0;
+    padding: 0;
+    width: 230px;
+    height: 40px;
+    border: 1px solid #e7e7e7;
+    padding-left: 15px;
+  }
+
+
+  input::placeholder {
+    font-size: 15px;
+    line-height: 24px;
+    color: #cccccc;
+    font-family: $paragraph-font-family;
+    font-weight: $light-weight;
+    font-style: $italic-style;
+  }
+
+  .button {
+    &--subscribe {
+      display: block;
+      width: 150px;
+      height: 40px;
+      border: none;
+      background-color: #95e1d3;
+      font-size: 14px;
+      color: $basic-color;
+      font-family: $primary-font-family;
+      font-weight: $bold-weight;
+      text-align: center;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  }
+
+}

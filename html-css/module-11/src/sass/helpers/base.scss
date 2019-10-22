@@ -1,0 +1,75 @@
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+body {
+    font-family: $paragraph-font-family, $primary-font-family, $title-font-family, "Arial", sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+    color: $paragraph-color;
+    font-weight: $normal-weight;
+}
+
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.navigation-list,
+.services-list,
+.team-list,
+.social-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+p {
+    padding: 0;
+    margin: 0;
+}
+
+span {
+    display: block;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 30px;
+    color: $title-color;
+    font-family: $primary-font-family;
+    font-weight: $bold-weight;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.section-title span {
+    font-size: 24px;
+    color: $title-color;
+    font-family: $title-font-family;
+    font-weight: $normal-weight;
+    text-align: center;
+    text-transform: none;
+    margin-bottom: 20px;
+}

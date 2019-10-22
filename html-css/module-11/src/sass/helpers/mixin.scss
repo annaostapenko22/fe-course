@@ -1,0 +1,4 @@
+@mixin main-padding($top, $bottom) {
+padding-top: $top;
+padding-bottom: $bottom;
+}
