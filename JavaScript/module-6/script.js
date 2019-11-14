@@ -97,6 +97,13 @@ import users from "./users.js";
 //   return users;
 // };
 
+// ANOTHER VARIANT=====================================================================================
+// const getUsersWithFriend = (users, friendName) => {
+//   const newArr = users.filter(user => user.friends.includes(friendName));
+//   users = newArr.map(elem => elem.name);
+//   return users;
+// };
+
 // console.log(getUsersWithFriend(users, "Briana Decker")); // [ 'Sharlene Bush', 'Sheree Anthony' ]
 // console.log(getUsersWithFriend(users, "Goldie Gentry")); // [ 'Elma Head', 'Sheree Anthony' ]
 
@@ -128,16 +135,16 @@ import users from "./users.js";
 // TASK-10
 // Получить массив всех умений всех пользователей (поле skills), при этом не должно быть повторяющихся умений и они должны быть отсортированы в алфавитном порядке.
 
-const getSortedUniqueSkills = users => {
-  const newArr = users
-    .map(elem => {
-      // console.log(elem.skills);
-      return elem.skills;
-    })
-    .flat();
-  users = [...new Set(newArr)].sort();
-  return users;
-};
+// const getSortedUniqueSkills = users => {
+//   const newArr = users
+//     .map(elem => {
+//       // console.log(elem.skills);
+//       return elem.skills;
+//     })
+//     .flat();
+//   users = [...new Set(newArr)].sort();
+//   return users;
+// };
 
-console.log(getSortedUniqueSkills(users));
+// console.log(getSortedUniqueSkills(users));
 // [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
