@@ -135,16 +135,36 @@ import users from "./users.js";
 // TASK-10
 // Получить массив всех умений всех пользователей (поле skills), при этом не должно быть повторяющихся умений и они должны быть отсортированы в алфавитном порядке.
 
-// const getSortedUniqueSkills = users => {
-//   const newArr = users
-//     .map(elem => {
-//       // console.log(elem.skills);
-//       return elem.skills;
-//     })
-//     .flat();
-//   users = [...new Set(newArr)].sort();
-//   return users;
-// };
+const getSortedUniqueSkills = users => {
+  const newArr = users
+    .map(elem => {
+      // console.log(elem.skills);
+      return elem.skills;
+    })
+    .flat();
+  const skills = [...new Set(newArr)].sort();
+  return skills;
+};
 
-// console.log(getSortedUniqueSkills(users));
-// [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
+console.log(getSortedUniqueSkills(users));
+[
+  "adipisicing",
+  "amet",
+  "anim",
+  "commodo",
+  "culpa",
+  "elit",
+  "ex",
+  "ipsum",
+  "irure",
+  "laborum",
+  "lorem",
+  "mollit",
+  "non",
+  "nostrud",
+  "nulla",
+  "proident",
+  "tempor",
+  "velit",
+  "veniam"
+];
