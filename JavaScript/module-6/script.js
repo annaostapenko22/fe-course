@@ -136,12 +136,10 @@ import users from "./users.js";
 // Получить массив всех умений всех пользователей (поле skills), при этом не должно быть повторяющихся умений и они должны быть отсортированы в алфавитном порядке.
 
 const getSortedUniqueSkills = users => {
-  const newArr = users
-    .map(elem => {
-      // console.log(elem.skills);
-      return elem.skills;
-    })
-    .flat();
+  const newArr = users.flatMap(elem => {
+    // console.log(elem.skills);
+    return elem.skills;
+  });
   const skills = [...new Set(newArr)].sort();
   return skills;
 };
