@@ -121,14 +121,28 @@ img {
 .card__button {
   width: 100%;
   display: block;
+
+
   background: rgb(27, 110, 233);
   border: none;
   padding: 10px;
   border-radius: 5px;
   color: rgb(255, 255, 255);
   cursor: pointer;
-  /* background-image: url("./images/shopping-cart.svg"); */
+  background-image: url("./images/shopping-cart.svg");
+  background-repeat: no-repeat;
+  background-position: 38% 50%;
+  background-size: 20px;
 }
+
+/* .card__button::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  
+  position: absolute;
+} */
 
 .change-theme {
   display: block;
