@@ -1,0 +1,177 @@
+@import "./fonts.css";
+
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+  /*
+   * CSS image reference example.
+   */
+  /* background-image: url('images/bg-pattern.png'); */
+}
+
+.dark-theme {
+  background: rgb(36, 35, 35);
+  color: white;
+}
+
+.dark-theme .change-theme {
+  color: rgb(255, 255, 255);
+  background-image: url('./images/toggle-on.svg');
+}
+
+.dark-theme .card__price::before {
+  background-image: url("./images/money-day.svg");
+
+}
+
+.intro {
+  padding: 0 20px;
+}
+
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.menu {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.menu__item {
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+.menu,
+.tag-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: left;
+  margin-bottom: 20px;
+  align-items: flex-start;
+}
+
+.card__image {
+  height: 310px;
+  width: 450px;
+  object-fit: cover;
+}
+
+.card__name {
+  min-height: 65px;
+}
+
+.card__descr {
+  min-height: 210px;
+}
+
+.card__price {
+  padding-left: 20px;
+  position: relative;
+}
+
+.card__price::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url("./images/money-night.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  left: -5px;
+}
+
+.tag-list__item {
+  margin-right: 10px;
+  padding: 5px;
+  border-radius: 3px;
+  background-color: rgb(18, 18, 124);
+  color: rgb(255, 255, 255);
+  margin-bottom: 5px;
+}
+
+
+.card__button {
+  width: 100%;
+  display: block;
+  background: rgb(27, 110, 233);
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  /* background-image: url("./images/shopping-cart.svg"); */
+}
+
+.change-theme {
+  display: block;
+  width: 80px;
+  padding: 30px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url('./images/toggle-off.svg');
+
+  margin-left: auto;
+  position: relative;
+  font-family: "DayNight";
+  margin-right: 25px;
+  outline: none;
+}
+
+
+.change-theme::before {
+  content: '\e900';
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: -35%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transform: translateY(-50%);
+  font-weight: 900;
+}
+
+.change-theme::after {
+  content: '\e901';
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  right: -35%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transform: translateY(-50%) rotate(165deg);
+  font-weight: 900;
+}
