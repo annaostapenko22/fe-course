@@ -21,7 +21,7 @@ function getCountries(name) {
 function getCountryInfo(evt) {
   if (!evt.target.value) {
     refs.countryList.innerHTML = '';
-    refs.refs.countryInfo.innerHTML = '';
+    refs.countryInfo.innerHTML = '';
   }
   if (evt.target.value) {
     getCountries(evt.target.value)
