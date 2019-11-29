@@ -7,28 +7,27 @@ import 'pnotify/dist/PNotifyBrightTheme.css';
 import oneCountry from './templates/oneCountryTemplate.hbs';
 
 axios.defaults.baseURL = 'https://restcountries.eu/rest/v2';
+
 const refs = {
   search: document.querySelector('[type = search]'),
-  //   countryList: document.querySelector('.countryList'),
-  //   countryInfo: document.querySelector('.oneCountryInfo')
+  countryList: document.querySelector('.countryList'),
+  countryInfo: document.querySelector('.oneCountryInfo'),
 };
 
 function getCountries(name) {
   return axios.get(`/name/${name}`);
 }
-const countryList = document.querySelector('.countryList');
-const countryInfo = document.querySelector('.oneCountryInfo');
 
 function getCountryInfo(evt) {
   if (!evt.target.value) {
-    countryList.innerHTML = '';
-    countryInfo.innerHTML = '';
+    refs.countryList.innerHTML = '';
+    refs.refs.countryInfo.innerHTML = '';
   }
   if (evt.target.value) {
     getCountries(evt.target.value)
       .then(({ data }) => {
-        countryList.innerHTML = '';
-        countryInfo.innerHTML = '';
+        refs.countryList.innerHTML = '';
+        refs.countryInfo.innerHTML = '';
 
         if (data.length >= 10) {
           PNotify.error({
@@ -36,22 +35,25 @@ function getCountryInfo(evt) {
           });
         }
         if (data.length === 1) {
-          countryInfo.insertAdjacentHTML('beforeend', oneCountry(data[0]));
+          refs.countryInfo.insertAdjacentHTML('beforeend', oneCountry(data[0]));
         } else {
           data.forEach(item => {
-            countryInfo.innerHTML = '';
+            refs.countryInfo.innerHTML = '';
 
             if (!item) {
-              countryInfo.innerHTML = '';
-              countryList.innerHTML = '';
+              refs.countryInfo.innerHTML = '';
+              refs.countryList.innerHTML = '';
             }
             if (
               item.name.toLowerCase().includes(evt.target.value.toLowerCase())
             ) {
-              countryList.innerHTML = '';
+              refs.countryList.innerHTML = '';
               if (data.length < 10 && data.length >= 2) {
                 data.forEach(item => {
-                  countryList.insertAdjacentHTML('beforeend', countries(item));
+                  refs.countryList.insertAdjacentHTML(
+                    'beforeend',
+                    countries(item),
+                  );
                 });
                 PNotify.closeAll();
               }
@@ -63,8 +65,8 @@ function getCountryInfo(evt) {
         PNotify.alert({
           text: 'Entered invalid value',
         });
-        countryInfo.innerHTML = '';
-        countryList.innerHTML = '';
+        refs.countryInfo.innerHTML = '';
+        refs.countryList.innerHTML = '';
       });
   }
 }
