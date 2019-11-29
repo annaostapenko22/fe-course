@@ -1,0 +1,19 @@
+{{#with this}}
+<h2 class="title">{{name}}</h2>
+
+
+<ul class="oneCountryList">
+    <li>Capital: {{capital}}</li>
+    <li>Population: {{population}} </li>
+    <li>Languages:
+
+        <ul class="languagesList">
+            {{#each languages}}
+            <li>{{this.name}}</li>{{/each}}
+        </ul>
+    </li>
+
+</ul>
+<img src={{flag}} alt={{name}} class="flag">
+
+{{/with}}
