@@ -155,6 +155,11 @@ img {
 
 }
 
+.imgItem:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
 .lightbox.is-open .lightbox__content {
   transform: scale(1);
 }

@@ -17,7 +17,6 @@ const refs = {
   downloads: document.querySelector('.downloads'),
   shows: document.querySelector('.shows'),
   loader: document.querySelector('.loader-wrapper'),
-  stats: document.querySelector('.stats'),
 };
 
 const getImages = (name, page) => {
@@ -63,19 +62,19 @@ function scroll() {
 function showPreview(evt) {
   if (evt.target.nodeName === 'IMG') {
     refs.loader.style.display = 'flex';
-    refs.lightBox.classList.add('is-open');
-    refs.photoCard.classList.add('isBlur');
     const getImg = event.target.dataset.source;
+    refs.photoCardItem.setAttribute('src', getImg);
+    refs.photoCard.classList.add('isBlur');
+    refs.lightBox.classList.add('is-open');
     const getComments = event.target.dataset.comments;
     const getLikes = event.target.dataset.likes;
     const getViews = event.target.dataset.shows;
     const getDownloads = event.target.dataset.downloads;
-    refs.photoCardItem.setAttribute('src', getImg);
 
     setTimeout(function() {
       refs.loader.style.display = 'none';
       refs.photoCard.classList.remove('isBlur');
-    }, 800);
+    }, 1000);
     refs.likes.textContent = getLikes;
     refs.comments.textContent = getComments;
     refs.shows.textContent = getViews;
