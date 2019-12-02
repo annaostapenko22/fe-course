@@ -46,6 +46,7 @@ img {
 
 .imgItem {
   margin-bottom: 3%;
+  position: relative;
 }
 
 .buttonImage {
@@ -192,29 +193,42 @@ img {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* .lightbox__button i {
-  font-size: 36px;
-} */
 
 /* stats */
 
+.stats {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 4px;
+  background-color: rgba(12, 24, 20, 0.568);
+  display: none;
+}
 
+.stats p {
+  font-size: 20px;
+}
 
 .stats-item {
   color: #fff;
-  font-family: 'socials';
-  margin-bottom: 5px;
-  margin-left: 5px;
+
+
 }
 
+.imgItem:hover .stats {
+  display: flex;
+}
+
+/* 
 .stats-item::before {
   font-size: 20px;
   display: block;
-}
+} */
 
 
 
-.stats-item:first-child::before {
+/* .stats-item:first-child::before {
   content: "\e902";
 }
 
@@ -228,7 +242,9 @@ img {
 
 .stats-item:last-child::before {
   content: "\e900";
-}
+} */
+
+
 
 /* loader */
 .loader-wrapper {

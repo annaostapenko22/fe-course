@@ -67,19 +67,19 @@ function showPreview(evt) {
     refs.photoCardItem.setAttribute('src', getImg);
     refs.photoCard.classList.add('isBlur');
     refs.lightBox.classList.add('is-open');
-    const getComments = event.target.dataset.comments;
-    const getLikes = event.target.dataset.likes;
-    const getViews = event.target.dataset.shows;
-    const getDownloads = event.target.dataset.downloads;
+    // const getComments = event.target.dataset.comments;
+    // const getLikes = event.target.dataset.likes;
+    // const getViews = event.target.dataset.shows;
+    // const getDownloads = event.target.dataset.downloads;
 
     setTimeout(function() {
       refs.loader.style.display = 'none';
       refs.photoCard.classList.remove('isBlur');
     }, 1000);
-    refs.likes.textContent = getLikes;
-    refs.comments.textContent = getComments;
-    refs.shows.textContent = getViews;
-    refs.downloads.textContent = getDownloads;
+    // refs.likes.textContent = getLikes;
+    // refs.comments.textContent = getComments;
+    // refs.shows.textContent = getViews;
+    // refs.downloads.textContent = getDownloads;
   }
 }
 
@@ -105,20 +105,6 @@ function scrollWindow() {
     return;
   }
 }
-
-// function populate() {
-//   while (true) {
-//     // нижняя граница документа
-//     let windowRelativeBottom = document.documentElement.getBoundingClientRect()
-//       .bottom;
-
-//     // если пользователь прокрутил достаточно далеко (< 100px до конца)
-//     if (windowRelativeBottom < document.documentElement.clientHeight + 100) {
-//       // добавим больше данных
-//       drawImages();
-//     }
-//   }
-// }
 
 refs.upBtn.addEventListener('click', scroll);
 refs.searchField.addEventListener('submit', searchFormHandler);
