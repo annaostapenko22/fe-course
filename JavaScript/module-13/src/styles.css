@@ -41,12 +41,12 @@ img {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .buttonImage {
-  width: 140px;
-  height: 100px;
+  width: 450px;
+  height: 350px;
   object-fit: cover;
 }
 

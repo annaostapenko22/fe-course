@@ -21,7 +21,7 @@ const refs = {
 
 const getImages = (name, page) => {
   return axios.get(
-    `https://pixabay.com/api/?key=14452993-a97f0aeb82bfc4ebb60896535&q=${name}&per_page=70&page=${page}`,
+    `https://pixabay.com/api/?key=14452993-a97f0aeb82bfc4ebb60896535&q=${name}&per_page=12&page=${page}`,
   );
 };
 let page = 1;
